@@ -1,7 +1,6 @@
 import { UploadOutlined } from '@ant-design/icons';
 import '@ant-design/compatible/assets/index.css';
 import { Button, Input, Upload, Form } from 'antd';
-import { FormattedMessage } from 'umi-plugin-react/locale';
 import React, { Component, Fragment } from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
@@ -13,7 +12,7 @@ const FormItem = Form.Item;
 const AvatarView = () => (
   <Fragment>
     <div className={styles.avatar_title}>
-      <FormattedMessage id="commonandaccountsettings.basic.avatar" defaultMessage="Avatar" />
+      Logo
     </div>
     <div className={styles.avatar}>
       <img src='https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png' alt="avatar" />
@@ -22,7 +21,7 @@ const AvatarView = () => (
       <div className={styles.button_view}>
         <Button>
           <UploadOutlined />
-          <FormattedMessage id="commonandaccountsettings.basic.change-avatar" defaultMessage="Change avatar" />
+          上传头像
         </Button>
       </div>
     </Upload>

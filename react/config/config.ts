@@ -131,6 +131,12 @@ export default {
                   icon: 'safety',
                   component: './admin/role',
                 },
+                {
+                  path: '/admin/auditlogging',
+                  name: '审计日志',
+                  icon: 'schedule',
+                  component: './admin/auditlog',
+                },
               ],
             },
             {

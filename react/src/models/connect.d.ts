@@ -7,6 +7,7 @@ import { UserModelState } from './user';
 import { StateType } from './login';
 import { RoleModelState } from "../pages/admin/role/model";
 import { AccountSettingsModalState } from "../pages/common/AccountSettings/model";
+import { AuditLogModalState } from "../pages/admin/auditlog/model";
 
 export { GlobalModelState, SettingModelState, UserModelState };
 
@@ -21,6 +22,7 @@ export interface Loading {
     role?: boolean;
     login?: boolean;
     accountSettings?:boolean;
+    auditLog?:boolean;
   };
 }
 
@@ -32,6 +34,7 @@ export interface ConnectState {
   role: RoleModelState;
   login: StateType;
   accountSettings:AccountSettingsModalState;
+  auditLog:AuditLogModalState
 }
 
 export interface Route extends MenuDataItem {

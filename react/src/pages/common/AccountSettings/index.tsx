@@ -43,10 +43,6 @@ class AccountSettings extends Component<
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch({
-      type: 'accountSettings/fetchCurrent',
-    });
     window.addEventListener('resize', this.resize);
     this.resize();
   }
@@ -65,7 +61,13 @@ class AccountSettings extends Component<
     return menuMap[selectKey];
   };
 
-  selectKey = (key: AccountSettingsStateKeys) => {
+  selectKey = async (key: AccountSettingsStateKeys) => {
+    if(key==='security') {
+      const { dispatch } = this.props;
+      await dispatch({
+        type: 'accountSettings/getMyProfile',
+      })
+    }
     this.setState({
       selectKey: key,
     });

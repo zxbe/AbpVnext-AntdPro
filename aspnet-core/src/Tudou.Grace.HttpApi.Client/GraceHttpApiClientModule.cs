@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Tudou.Abp.AuditLogging;
 using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -10,6 +11,7 @@ namespace Tudou.Grace
 {
     [DependsOn(
         typeof(GraceApplicationContractsModule),
+        typeof(AbpAuditLoggingHttpApiClientModule),
         typeof(AbpAccountHttpApiClientModule),
         typeof(AbpIdentityHttpApiClientModule),
         typeof(AbpPermissionManagementHttpApiClientModule),

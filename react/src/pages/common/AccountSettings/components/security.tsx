@@ -15,13 +15,6 @@ interface SecurityViewProps {
 
 class SecurityView extends Component<SecurityViewProps> {
 
-  async componentDidMount() {
-    const { dispatch } = this.props;
-    await dispatch({
-      type: 'accountSettings/getMyProfile',
-    })
-  }
-
   submitHandle = (values: any) => {
     const { dispatch } = this.props;
     dispatch({

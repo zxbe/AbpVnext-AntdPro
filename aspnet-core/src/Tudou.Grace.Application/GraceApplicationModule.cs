@@ -1,4 +1,5 @@
-﻿using Volo.Abp.Account;
+﻿using Tudou.Abp.AuditLogging;
+using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -10,6 +11,7 @@ namespace Tudou.Grace
 {
     [DependsOn(
         typeof(GraceDomainModule),
+        typeof(AbpAuditLoggingApplicationModule),
         typeof(AbpAccountApplicationModule),
         typeof(GraceApplicationContractsModule),
         typeof(AbpIdentityApplicationModule),
